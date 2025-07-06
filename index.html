@@ -3,23 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>シンプルオープンチャット</title>
+    <title>地震速報/気象情報/交通情報 共有オープンチャット 公式サイト</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat-header">
-            <h1>オープンチャットへようこそ！</h1>
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>地震速報 / 気象情報 / 交通情報 共有オープンチャット</h1>
+            <p class="subtitle">安心・迅速な情報共有で未来を守る</p>
         </div>
+    </header>
 
-        <div class="chat-messages" id="chat-messages">
+    <main class="main-content">
+        <section class="section-strength">
+            <h2>私たちの強み</h2>
+            <div class="strength-grid">
+                <div class="strength-item">
+                    <h3>迅速な情報伝達</h3>
+                    <p>緊急時でも即座に最新の情報を共有し、迅速な対応をサポートします。</p>
+                    <p>もちろん、メンバーも情報共有が可能です。</p>
+                </div>
+                <div class="strength-item">
+                    <h3>正確なデータ</h3>
+                    <p>厳選された信頼性の高い情報源から、正確な情報をお届けします。</p>
+                </div>
+                <div class="strength-item">
+                    <h3>活発なコミュニティ</h3>
+                    <p>300人以上のメンバーが、安心と信頼のネットワークを形成しています。</p>
+                </div>
             </div>
+            <div class="join-button-container">
+                <a href="https://line.me/ti/g2/TbIeEFT9tA2ZAfujTwy2TeH64ZHzji6w0IHx-A?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" class="join-button">
+                    今すぐ入室する
+                </a>
+            </div>
+        </section>
 
-        <div class="chat-input">
-            <input type="text" id="message-input" placeholder="メッセージを入力してください...">
-            <button id="send-button">送信</button>
-        </div>
-    </div>
+        <section class="section-latest-info">
+            <h2>最新速報情報</h2>
+            <div id="latest-info-container" class="info-list">
+                <p class="loading-message">情報を読み込み中...</p>
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 地震速報/気象情報/交通情報 共有オープンチャット. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
