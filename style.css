@@ -1,20 +1,20 @@
-/* 基本設定 */
+/* 基本設定 (変更なし) */
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* 全体の背景色 */
+    background-color: #f8f9fa;
     color: #333;
     line-height: 1.6;
 }
 
 h1, h2, h3 {
-    color: #2c3e50; /* 濃い青系の見出し色 */
+    color: #2c3e50;
 }
 
-/* ヒーローセクション */
+/* ヒーローセクション (変更なし) */
 .hero-section {
-    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%); /* 青系のグラデーション */
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
     color: white;
     text-align: center;
     padding: 80px 20px;
@@ -24,7 +24,7 @@ h1, h2, h3 {
 .hero-section h1 {
     font-size: 2.8em;
     margin-bottom: 10px;
-    color: white; /* タイトルも白に */
+    color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -34,7 +34,7 @@ h1, h2, h3 {
     margin-top: 0;
 }
 
-/* メインコンテンツ */
+/* メインコンテンツ (変更なし) */
 .main-content {
     max-width: 1000px;
     margin: 40px auto;
@@ -69,7 +69,7 @@ section h2::after {
     border-radius: 2px;
 }
 
-/* 私たちの強みセクション */
+/* 私たちの強みセクション (変更なし) */
 .strength-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -78,7 +78,7 @@ section h2::after {
 }
 
 .strength-item {
-    background-color: #f4f7f9; /* 各強みBOXの背景色 */
+    background-color: #f4f7f9;
     border-radius: 8px;
     padding: 25px;
     text-align: center;
@@ -92,7 +92,7 @@ section h2::after {
 }
 
 .strength-item h3 {
-    color: #3498db; /* 青色の小見出し */
+    color: #3498db;
     font-size: 1.3em;
     margin-top: 0;
     margin-bottom: 15px;
@@ -103,7 +103,7 @@ section h2::after {
     color: #555;
 }
 
-/* 入室ボタン */
+/* 入室ボタン (変更なし) */
 .join-button-container {
     text-align: center;
     margin-top: 40px;
@@ -111,7 +111,7 @@ section h2::after {
 
 .join-button {
     display: inline-block;
-    background-color: #28a745; /* 緑色のボタン */
+    background-color: #28a745;
     color: white;
     padding: 15px 35px;
     border-radius: 30px;
@@ -133,14 +133,14 @@ section h2::after {
 
 /* 最新速報情報セクション */
 .info-list {
-    min-height: 150px; /* 情報がない場合に備えて最低高さを設定 */
+    min-height: 150px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
 .info-item {
-    background-color: #fefefe; /* 各情報BOXの背景色 */
+    background-color: #fefefe;
     border-left: 5px solid; /* 情報種別で色が変わるボーダー */
     border-radius: 8px;
     padding: 15px 20px;
@@ -149,12 +149,19 @@ section h2::after {
     flex-direction: column;
 }
 
+/* 情報種別ごとのボーダー色 */
 .info-item.earthquake { border-color: #e74c3c; /* 赤 */ }
 .info-item.weather { border-color: #f39c12; /* オレンジ */ }
 .info-item.traffic { border-color: #27ae60; /* 緑 */ }
-.info-item.system { border-color: #7f8c8d; /* グレー */ } /* 汎用システム情報用 */
+.info-item.system { border-color: #7f8c8d; /* グレー */ }
 
-.info-item .info-tag {
+.info-item h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: #34495e;
+}
+
+.info-item .info-tag { /* Type表示用のタグスタイルを復活 */
     display: inline-block;
     background-color: #7f8c8d; /* デフォルトのタグ背景 */
     color: white;
@@ -169,6 +176,8 @@ section h2::after {
 .info-item.earthquake .info-tag { background-color: #e74c3c; }
 .info-item.weather .info-tag { background-color: #f39c12; }
 .info-item.traffic .info-tag { background-color: #27ae60; }
+.info-item.system .info-tag { background-color: #7f8c8d; }
+
 
 .info-item .info-date {
     font-size: 0.8em;
@@ -189,9 +198,9 @@ section h2::after {
     padding: 30px;
 }
 
-/* フッター */
+/* フッター (変更なし) */
 .footer {
-    background-color: #2c3e50; /* ヘッダーと同じ濃い青系 */
+    background-color: #2c3e50;
     color: white;
     text-align: center;
     padding: 25px;
@@ -199,7 +208,7 @@ section h2::after {
     margin-top: 50px;
 }
 
-/* レスポンシブ対応 */
+/* レスポンシブ対応 (変更なし) */
 @media (max-width: 768px) {
     .hero-section h1 {
         font-size: 2em;
@@ -214,7 +223,7 @@ section h2::after {
     }
 
     .strength-grid {
-        grid-template-columns: 1fr; /* 1列にする */
+        grid-template-columns: 1fr;
     }
 
     .strength-item {
