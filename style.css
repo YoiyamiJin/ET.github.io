@@ -1,117 +1,228 @@
-/* 全体のフォント、背景色、中央揃えを設定 */
+/* 基本設定 */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 読みやすいフォントを指定 */
-    background-color: #e6e9ed; /* 薄いグレーの背景色 */
-    display: flex; /* Flexboxを使って子要素を中央に配置 */
-    justify-content: center; /* 水平方向の中央揃え */
-    align-items: center; /* 垂直方向の中央揃え */
-    min-height: 100vh; /* 画面全体の高さを確保 */
-    margin: 0; /* デフォルトのマージンをリセット */
-    padding: 20px; /* 全体に少し余白を持たせる */
-    box-sizing: border-box; /* パディングとボーダーを要素の幅に含める */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* 全体の背景色 */
+    color: #333;
+    line-height: 1.6;
 }
 
-/* チャットコンテナのスタイル */
-.chat-container {
-    background-color: #ffffff; /* コンテナ自体は白のまま */
-    border-radius: 12px; /* 角を丸くする */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* 影をつけて立体感を出す */
-    width: 95%; /* 幅を画面の95%に設定 */
-    max-width: 700px; /* 最大幅を設定 */
-    display: flex; /* Flexboxを使って子要素を縦方向に配置 */
-    flex-direction: column; /* 縦方向に並べる */
-    height: 85vh; /* 高さも画面の85%に設定 */
-    overflow: hidden; /* コンテナからはみ出る内容を隠す */
+h1, h2, h3 {
+    color: #2c3e50; /* 濃い青系の見出し色 */
 }
 
-/* チャットヘッダーのスタイル */
-.chat-header {
-    background-color: #2c3e50; /* 青っぽい紺色に変更 */
-    color: white; /* 文字色を白に */
-    padding: 18px; /* パディング */
-    text-align: center; /* 文字を中央揃えに */
-    border-top-left-radius: 12px; /* 左上の角を丸く */
-    border-top-right-radius: 12px; /* 右上の角を丸く */
-    font-size: 1.1em; /* フォントサイズを少し大きく */
-    font-weight: bold; /* 太字 */
+/* ヒーローセクション */
+.hero-section {
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%); /* 青系のグラデーション */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* メッセージ表示エリアのスタイル */
-.chat-messages {
-    flex-grow: 1; /* 残りのスペースを全て占めるようにする */
-    padding: 15px; /* パディング */
-    overflow-y: auto; /* メッセージが多くなったらスクロールできるようにする */
-    display: flex; /* Flexboxを使ってメッセージを縦に並べる */
-    flex-direction: column; /* 縦方向に並べる */
-    gap: 10px; /* メッセージ間の間隔 */
-    background-color: #f5f7fa; /* コンテンツ欄の背景を薄いグレーに */
+.hero-section h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: white; /* タイトルも白に */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* 個々のメッセージの基本スタイル - 白いBOXになるように変更 */
-.message {
-    background-color: #ffffff; /* メッセージの背景を白に */
-    border-radius: 10px; /* 角を少し丸く */
-    padding: 10px 15px; /* パディング */
-    max-width: 75%; /* 最大幅を制限 */
-    align-self: flex-start; /* デフォルトでは左寄せ（相手のメッセージ） */
-    word-wrap: break-word; /* 長い単語を折り返す */
-    line-height: 1.4; /* 行の高さ */
-    font-size: 0.95em; /* フォントサイズ */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* 軽い影でBOX感を出す */
-    color: #333; /* メッセージの文字色を少し濃いグレーに */
+.hero-section .subtitle {
+    font-size: 1.4em;
+    opacity: 0.9;
+    margin-top: 0;
 }
 
-/* 送信したメッセージのスタイル（右寄せ、青色） */
-.message.sent {
-    background-color: #4A90E2; /* 青色系の送信メッセージの背景色 */
-    color: white; /* 文字色を白に */
-    align-self: flex-end; /* 右寄せにする */
-    /* sentクラスにも少し影をつけることで、統一感を保つ */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* メインコンテンツ */
+.main-content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-/* チャット入力エリアのスタイル */
-.chat-input {
-    display: flex; /* Flexboxを使って入力欄とボタンを横に並べる */
-    padding: 15px; /* パディング */
-    border-top: 1px solid #eeeeee; /* 上部に区切り線 */
-    gap: 10px; /* 要素間の間隔 */
-    background-color: #2c3e50; /* ヘッダーと同じ青っぽい紺色に */
+section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    margin-bottom: 40px;
 }
 
-/* 入力ボックスのスタイル */
-.chat-input input {
-    flex-grow: 1; /* 残りのスペースを全て占める */
-    padding: 12px 18px; /* パディング */
-    border: 1px solid #cccccc; /* 薄いグレーのボーダー */
-    border-radius: 25px; /* 角を丸くする */
-    font-size: 1em; /* フォントサイズ */
-    outline: none; /* フォーカス時のアウトラインを消す */
-    transition: border-color 0.3s ease; /* ホバー時のアニメーション */
+section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
 }
 
-.chat-input input:focus {
-    border-color: #4A90E2; /* フォーカス時に青っぽい色に */
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #3498db;
+    border-radius: 2px;
 }
 
-/* 送信ボタンのスタイル */
-.chat-input button {
-    background-color: #4A90E2; /* 青色系のボタン色 */
-    color: white; /* 文字色を白に */
-    border: none; /* ボーダーなし */
-    border-radius: 25px; /* 角を丸くする */
-    padding: 12px 25px; /* パディング */
-    cursor: pointer; /* マウスオーバー時にカーソルをポインターに */
-    font-size: 1em; /* フォントサイズ */
-    transition: background-color 0.3s ease, transform 0.1s ease; /* ホバー時のアニメーション */
-    white-space: nowrap; /* ボタン内のテキストを改行しない */
+/* 私たちの強みセクション */
+.strength-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
 }
 
-.chat-input button:hover {
-    background-color: #357ABD; /* ホバー時に少し暗い青色に */
-    transform: translateY(-1px); /* 少し上に浮き上がるアニメーション */
+.strength-item {
+    background-color: #f4f7f9; /* 各強みBOXの背景色 */
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.chat-input button:active {
-    transform: translateY(0); /* クリック時に戻るアニメーション */
+.strength-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.strength-item h3 {
+    color: #3498db; /* 青色の小見出し */
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.strength-item p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* 入室ボタン */
+.join-button-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.join-button {
+    display: inline-block;
+    background-color: #28a745; /* 緑色のボタン */
+    color: white;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+.join-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.join-button:active {
+    transform: translateY(0);
+}
+
+/* 最新速報情報セクション */
+.info-list {
+    min-height: 150px; /* 情報がない場合に備えて最低高さを設定 */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-item {
+    background-color: #fefefe; /* 各情報BOXの背景色 */
+    border-left: 5px solid; /* 情報種別で色が変わるボーダー */
+    border-radius: 8px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item.earthquake { border-color: #e74c3c; /* 赤 */ }
+.info-item.weather { border-color: #f39c12; /* オレンジ */ }
+.info-item.traffic { border-color: #27ae60; /* 緑 */ }
+.info-item.system { border-color: #7f8c8d; /* グレー */ } /* 汎用システム情報用 */
+
+.info-item .info-tag {
+    display: inline-block;
+    background-color: #7f8c8d; /* デフォルトのタグ背景 */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+/* 情報タグの色を情報タイプに合わせて調整 */
+.info-item.earthquake .info-tag { background-color: #e74c3c; }
+.info-item.weather .info-tag { background-color: #f39c12; }
+.info-item.traffic .info-tag { background-color: #27ae60; }
+
+.info-item .info-date {
+    font-size: 0.8em;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #444;
+}
+
+.loading-message {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 30px;
+}
+
+/* フッター */
+.footer {
+    background-color: #2c3e50; /* ヘッダーと同じ濃い青系 */
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9em;
+    margin-top: 50px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-section .subtitle {
+        font-size: 1.1em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    .strength-grid {
+        grid-template-columns: 1fr; /* 1列にする */
+    }
+
+    .strength-item {
+        padding: 20px;
+    }
+
+    .join-button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
 }
